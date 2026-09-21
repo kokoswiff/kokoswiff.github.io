@@ -1,0 +1,5 @@
+# TENFLUX — everything here is meant to be public and indexable.
+# app-ads.txt must stay crawlable in particular: AdMob's verifier fetches it
+# from the root of this host.
+User-agent: *
+Allow: /
