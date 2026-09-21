@@ -1,0 +1,2 @@
+# app-ads.txt carries the exact bytes AdMob printed. autocrlf must not touch it.
+app-ads.txt text eol=lf
