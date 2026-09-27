@@ -24,19 +24,27 @@
   </p>
 
   <p class="lede">
-    TENFLUX se joue entièrement hors ligne. Il ne demande ni compte, ni nom, ni adresse
-    e-mail. Si vous jouez, il crée pour vous un identifiant anonyme et un pseudonyme public —
-    que vous pouvez personnaliser — afin que votre score puisse figurer sur un classement, et
-    il affiche une publicité entre deux parties.
+    TENFLUX se joue sans compte : pas d'inscription, pas de mot de passe. Si vous jouez, il
+    crée pour vous un identifiant anonyme et un pseudonyme public — que vous pouvez
+    personnaliser — afin que votre score puisse figurer sur un classement, et il affiche une
+    publicité entre deux parties. Vous pouvez, si vous le souhaitez, associer un compte Google
+    pour protéger et récupérer votre profil (point 3). Le gameplay fonctionne hors ligne ; les
+    classements, la partie du jour et les fonctions de compte utilisent nos services en ligne.
   </p>
 
   <h2>1. Ce que nous ne collectons pas</h2>
   <p>
-    Nous ne collectons <strong>pas</strong> votre nom, votre adresse e-mail, votre numéro de
-    téléphone, votre date de naissance, votre position GPS, vos contacts, vos photos, vos
-    fichiers ni vos messages. TENFLUX ne demande aucune des autorisations correspondantes.
+    Nous ne collectons <strong>pas</strong> votre nom, votre numéro de téléphone, votre date
+    de naissance, votre position GPS, vos contacts, vos photos, vos fichiers ni vos messages.
+    TENFLUX ne demande aucune des autorisations correspondantes.
     Le seul texte libre que vous pouvez saisir est votre <strong>pseudonyme public</strong>
     (point 2) — n'y mettez ni votre vrai nom ni aucune information personnelle.
+  </p>
+  <p>
+    <strong>Votre adresse e-mail n'est pas stockée par TENFLUX.</strong> Si vous associez un
+    compte Google (point 3), elle est traitée par <strong>Firebase Authentication</strong>
+    (Google), le service qui gère la connexion, et n'apparaît ni dans notre base de données,
+    ni dans les classements, ni dans nos journaux.
   </p>
   <p>
     Il n'y a <strong>aucun outil de mesure d'audience</strong> et <strong>aucun rapport de
@@ -48,8 +56,8 @@
     La première fois que vous utilisez une fonctionnalité qui nécessite les services en ligne de
     TENFLUX — démarrer une partie, choisir un pseudonyme, ouvrir le classement ou la partie du
     jour — TENFLUX crée un compte <strong>anonyme</strong> auprès de Firebase Authentication
-    (Google). Ce compte n'a ni identifiant de connexion, ni mot de passe, ni adresse e-mail :
-    c'est un numéro.
+    (Google). Ce compte n'a, tant que vous ne le protégez pas (point 3), ni identifiant de
+    connexion, ni mot de passe, ni adresse e-mail : c'est un numéro.
   </p>
   <p>
     Tant que vous n'utilisez aucune de ces fonctionnalités, <strong>rien de tout cela
@@ -72,15 +80,27 @@
     montrée à personne.
   </p>
   <p>
-    Cet identifiant est lié à <strong>l'installation</strong>. Si vous désinstallez TENFLUX ou
-    changez de téléphone, il est perdu et ne peut pas être récupéré.
+    Sans compte Google associé, cet identifiant est lié à <strong>l'installation</strong> : si
+    vous désinstallez TENFLUX ou changez de téléphone sans avoir protégé votre profil, il est
+    perdu. Un profil <strong>protégé</strong> se récupère depuis « J'ai déjà un compte »
+    (point 3).
   </p>
 
-  <h2>3. Connexion Google</h2>
+  <h2>3. Compte Google (facultatif)</h2>
   <p>
-    Cette version de TENFLUX <strong>ne propose pas</strong> de connexion avec un compte Google,
-    ni aucune autre forme d'inscription. Si une telle fonctionnalité est ajoutée un jour, cette
-    politique sera mise à jour avant sa mise en service.
+    TENFLUX se joue entièrement sans compte. Si vous le souhaitez, vous pouvez <strong>associer
+    votre compte Google</strong> à votre profil (« Protéger mon compte ») : votre identifiant
+    TENFLUX reste exactement le même, et vous pouvez alors <strong>retrouver votre
+    profil</strong> sur un autre téléphone (« J'ai déjà un compte ») — pseudonyme, record
+    vérifié, progression des niveaux et état de la partie du jour tels que le serveur les
+    connaît.
+  </p>
+  <p>
+    <strong>Votre adresse e-mail n'est pas stockée par TENFLUX.</strong> Elle est traitée par
+    <strong>Firebase Authentication</strong> (Google), le service qui gère la connexion, et
+    n'apparaît ni dans notre base de données, ni dans les classements, ni dans nos journaux.
+    Firebase Authentication peut traiter ces données hors de l'Union européenne, dans les
+    conditions des clauses contractuelles de Google Cloud.
   </p>
 
   <h2>4. Publicité</h2>
@@ -140,11 +160,12 @@
 
   <h2>6. Ce qui reste sur votre téléphone</h2>
   <p>
-    Votre record, vos parties récentes, votre progression dans les niveaux, vos réglages et la
-    télémétrie de jeu sont <strong>enregistrés sur votre téléphone uniquement</strong>, dans un
-    dossier privé de l'application. Ils ne sont jamais transmis.
+    Votre record, vos parties récentes, vos réglages et la télémétrie de jeu restent sur votre
+    téléphone, dans un dossier privé de l'application. <strong>Votre progression dans les
+    niveaux</strong> est en plus copiée sur nos serveurs quand une connexion existe, afin de
+    pouvoir être restaurée si vous récupérez votre compte (point 3).
   </p>
-  <p>Ils sont supprimés lorsque vous désinstallez TENFLUX.</p>
+  <p>Les données locales sont supprimées lorsque vous désinstallez TENFLUX.</p>
 
   <h2>7. Sécurité et transferts</h2>
   <p>
@@ -166,8 +187,10 @@
 
   <h2>8. Conservation</h2>
   <ul>
-    <li><strong>Identifiant de joueur, pseudonyme, parties soumises</strong> : conservés tant que
-      le classement existe.</li>
+    <li><strong>Identifiant de joueur, pseudonyme, parties soumises, progression des
+      niveaux</strong> : conservés tant que le classement existe, ou jusqu'à la suppression de
+      votre compte (point 9) — les parties vérifiées sont alors conservées sans votre
+      identifiant.</li>
     <li><strong>Journaux du serveur</strong> : ils contiennent une <strong>empreinte</strong> de
       votre identifiant, jamais l'identifiant lui-même, et sont conservés selon la durée par défaut
       de Google Cloud.</li>
@@ -180,11 +203,18 @@
     d'opposition sur les données qui vous concernent.
   </p>
   <p>
-    La procédure est décrite sur la page
-    <a href="/delete-account/">suppression des données</a>. En résumé : écrivez à
-    <a href="mailto:swiffswiffer@gmail.com">swiffswiffer@gmail.com</a> en indiquant votre
-    pseudonyme de jeu (visible dans l'écran profil, par exemple <code>FLUX · 7K3Q</code>) — c'est
-    la seule information qui nous permette de retrouver votre enregistrement.
+    Depuis l'écran <strong>PROFIL → COMPTE</strong>, vous pouvez à tout moment <strong>exporter
+    vos données</strong> (un fichier JSON lisible) et <strong>supprimer votre compte</strong> —
+    profil, pseudonyme, entrées de classement, historique des parties du jour et progression
+    des niveaux. Les enregistrements de parties vérifiées sont conservés <strong>sans votre
+    identifiant</strong> (anti-triche, voir point 2).
+  </p>
+  <p>
+    La procédure complète est décrite sur la page
+    <a href="/delete-account/">suppression des données</a>. La demande par e-mail reste
+    possible : écrivez à <a href="mailto:swiffswiffer@gmail.com">swiffswiffer@gmail.com</a> en
+    indiquant votre pseudonyme de jeu (visible dans l'écran profil, par exemple
+    <code>FLUX · 7K3Q</code>).
   </p>
   <p>
     Vous pouvez également introduire une réclamation auprès de l'autorité de protection des

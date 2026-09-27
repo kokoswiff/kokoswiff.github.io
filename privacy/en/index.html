@@ -24,17 +24,25 @@
   </p>
 
   <p class="lede">
-    TENFLUX is played entirely offline. It asks for no account, no name and no email address.
-    If you play, it creates an anonymous identifier and a public nickname — which you can
-    personalise — so your score can appear on a leaderboard, and it shows an ad between runs.
+    TENFLUX is played without an account: no sign-up, no password. If you play, it creates an
+    anonymous identifier and a public nickname — which you can personalise — so your score can
+    appear on a leaderboard, and it shows an ad between runs. If you wish, you can link a
+    Google account to protect and recover your profile (section 3). Gameplay works offline;
+    the leaderboards, the daily and the account features use our online services.
   </p>
 
   <h2>1. What we do not collect</h2>
   <p>
-    We do <strong>not</strong> collect your name, email address, phone number, date of birth,
-    GPS location, contacts, photos, files or messages. TENFLUX requests none of the
-    corresponding permissions. The only free text you can type is your <strong>public
-    nickname</strong> (section 2) — do not put your real name or any personal information in it.
+    We do <strong>not</strong> collect your name, phone number, date of birth, GPS location,
+    contacts, photos, files or messages. TENFLUX requests none of the corresponding
+    permissions. The only free text you can type is your <strong>public nickname</strong>
+    (section 2) — do not put your real name or any personal information in it.
+  </p>
+  <p>
+    <strong>Your email address is not stored by TENFLUX.</strong> If you link a Google account
+    (section 3), it is processed by <strong>Firebase Authentication</strong> (Google), the
+    service that handles sign-in, and appears neither in our database, nor on the leaderboards,
+    nor in our logs.
   </p>
   <p>
     There is <strong>no analytics</strong> and <strong>no crash reporting</strong> in TENFLUX.
@@ -44,8 +52,9 @@
   <p>
     The first time you use a feature that needs TENFLUX's online services — starting a run,
     choosing a nickname, or opening the leaderboard or the daily — TENFLUX creates an
-    <strong>anonymous</strong> account with Firebase Authentication (Google). That account has no
-    sign-in username, no password and no email address: it is a number.
+    <strong>anonymous</strong> account with Firebase Authentication (Google). Until you protect
+    it (section 3), that account has no sign-in username, no password and no email address: it
+    is a number.
   </p>
   <p>
     Until you use one of those features, <strong>none of this exists</strong>: opening the game,
@@ -67,15 +76,26 @@
     the leaderboard from cheating. This data has no other use and is never shown to anyone.
   </p>
   <p>
-    This identifier belongs to <strong>the installation</strong>. If you uninstall TENFLUX or
-    change phone, it is lost and cannot be recovered.
+    Without a linked Google account, this identifier belongs to <strong>the
+    installation</strong>: if you uninstall TENFLUX or change phone without having protected
+    your profile, it is lost. A <strong>protected</strong> profile can be recovered from
+    “I already have an account” (section 3).
   </p>
 
-  <h2>3. Google sign-in</h2>
+  <h2>3. Google account (optional)</h2>
   <p>
-    This version of TENFLUX <strong>does not offer</strong> sign-in with a Google account, or any
-    other form of registration. If such a feature is ever added, this policy will be updated
-    before it goes live.
+    TENFLUX is played entirely without an account. If you wish, you can <strong>link your
+    Google account</strong> to your profile (“Protect my account”): your TENFLUX identifier
+    stays exactly the same, and you can then <strong>recover your profile</strong> on another
+    phone (“I already have an account”) — nickname, verified best, level progress and the state
+    of the daily as the server knows them.
+  </p>
+  <p>
+    <strong>Your email address is not stored by TENFLUX.</strong> It is processed by
+    <strong>Firebase Authentication</strong> (Google), the service that handles sign-in, and
+    appears neither in our database, nor on the leaderboards, nor in our logs. Firebase
+    Authentication may process this data outside the European Union, under the terms of Google
+    Cloud's contractual clauses.
   </p>
 
   <h2>4. Advertising</h2>
@@ -130,11 +150,12 @@
 
   <h2>6. What stays on your phone</h2>
   <p>
-    Your best score, your recent runs, your level progress, your settings and gameplay telemetry
-    are stored <strong>on your phone only</strong>, in a private application folder. They are never
-    transmitted.
+    Your best score, your recent runs, your settings and gameplay telemetry stay on your phone,
+    in a private application folder. <strong>Your level progress</strong> is additionally copied
+    to our servers when a connection exists, so it can be restored if you recover your account
+    (section 3).
   </p>
-  <p>They are deleted when you uninstall TENFLUX.</p>
+  <p>Local data is deleted when you uninstall TENFLUX.</p>
 
   <h2>7. Security and transfers</h2>
   <p>
@@ -154,8 +175,9 @@
 
   <h2>8. Retention</h2>
   <ul>
-    <li><strong>Player identifier, nickname, submitted runs</strong>: kept for as long as the
-      leaderboard exists.</li>
+    <li><strong>Player identifier, nickname, submitted runs, level progress</strong>: kept for
+      as long as the leaderboard exists, or until you delete your account (section 9) —
+      verified runs are then kept without your identifier.</li>
     <li><strong>Server logs</strong>: they contain a <strong>hash</strong> of your identifier,
       never the identifier itself, and are kept for Google Cloud's default retention period.</li>
     <li><strong>Data on your phone</strong>: until you uninstall.</li>
@@ -167,10 +189,16 @@
     concerning you.
   </p>
   <p>
-    The procedure is described on the <a href="/delete-account/">data deletion</a> page. In short:
-    write to <a href="mailto:swiffswiffer@gmail.com">swiffswiffer@gmail.com</a> quoting your
-    in-game nickname (visible on the profile screen, for example <code>FLUX · 7K3Q</code>) — it is
-    the only information that lets us find your record.
+    From the <strong>PROFILE → ACCOUNT</strong> screen, you can at any time <strong>export your
+    data</strong> (a readable JSON file) and <strong>delete your account</strong> — profile,
+    nickname, leaderboard entries, daily history and level progress. Verified run records are
+    kept <strong>without your identifier</strong> (anti-cheat, see section 2).
+  </p>
+  <p>
+    The full procedure is described on the <a href="/delete-account/">data deletion</a> page. A
+    request by email remains possible: write to
+    <a href="mailto:swiffswiffer@gmail.com">swiffswiffer@gmail.com</a> quoting your in-game
+    nickname (visible on the profile screen, for example <code>FLUX · 7K3Q</code>).
   </p>
   <p>
     You may also lodge a complaint with the data protection authority in your country.
