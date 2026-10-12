@@ -17,7 +17,7 @@
 
   <h1>Politique de confidentialité</h1>
   <p class="meta">
-    Dernière mise à jour : <strong>8 octobre 2026</strong><br>
+    Dernière mise à jour : <strong>12 octobre 2026</strong><br>
     Éditeur : <strong>TENFLUX</strong><br>
     Contact : <a href="mailto:privacy@tenflux.fr">privacy@tenflux.fr</a><br>
     <a href="/privacy/en/">Read this policy in English</a>
@@ -48,8 +48,10 @@
     ni dans les classements, ni dans nos journaux.
   </p>
   <p>
-    Il n'y a <strong>aucun outil de mesure d'audience</strong> et <strong>aucun rapport de
-    plantage</strong> dans TENFLUX.
+    Il n'y a <strong>aucun outil de mesure d'audience</strong> dans TENFLUX. Lorsque
+    l'application rencontre une erreur interne, elle peut transmettre à notre serveur un
+    <strong>rapport technique minimal</strong>, décrit précisément au point 6 — sans message
+    libre, sans identifiant publicitaire et sans aucun contenu de vos parties.
   </p>
 
   <h2>2. L'identifiant de joueur</h2>
@@ -170,7 +172,49 @@
     </p>
   </div>
 
-  <h2>6. Ce qui reste sur votre téléphone</h2>
+  <h2>6. Rapports techniques d'erreur</h2>
+  <p>
+    Lorsque TENFLUX rencontre une erreur interne — un écran qui ne parvient pas à se
+    construire, une exception imprévue — l'application enregistre un rapport technique sur
+    votre téléphone, puis peut en transmettre un résumé à notre serveur, <strong>au plus une
+    fois par session de jeu</strong>, et jamais pendant une partie.
+  </p>
+  <p>Ce résumé contient exactement les champs suivants, et rien d'autre :</p>
+  <ul>
+    <li>une <strong>empreinte de regroupement</strong> (huit caractères, calculée à partir du
+      type d'erreur et de l'endroit du code) ;</li>
+    <li>le <strong>type technique</strong> de l'erreur (par exemple <code>StateError</code>) ;</li>
+    <li>le <strong>filet</strong> qui l'a rattrapée (démarrage, affichage, tâche de fond) ;</li>
+    <li>la <strong>version</strong> et le <strong>numéro de build</strong> de l'application ;</li>
+    <li>le <strong>nombre d'occurrences</strong> dans la session ;</li>
+    <li>l'<strong>horodatage</strong> ;</li>
+    <li>jusqu'à huit <strong>emplacements de code</strong> (des noms de fichiers sources du
+      jeu, comme <code>home_screen.dart:42</code>).</li>
+  </ul>
+  <p>
+    Le rapport ne contient <strong>ni le message détaillé de l'erreur</strong> (qui reste sur
+    votre téléphone), ni votre pseudonyme, ni votre adresse e-mail, ni votre identifiant
+    publicitaire, ni le contenu de vos parties ou de vos sauvegardes : ces champs
+    <strong>n'existent pas</strong> dans le format transmis. La transmission passe par la même
+    connexion chiffrée et authentifiée que le reste du jeu ; dans nos journaux, le rapport est
+    rattaché à une <strong>empreinte pseudonyme</strong> de votre identifiant de joueur —
+    jamais l'identifiant lui-même. Il n'est donc pas totalement anonyme pendant sa
+    conservation, et nous préférons le dire que prétendre le contraire.
+  </p>
+  <p>
+    <strong>Finalité</strong> : détecter, regrouper et corriger les défaillances de
+    l'application. <strong>Base légale</strong> : notre <strong>intérêt légitime</strong> à
+    maintenir un jeu qui fonctionne — les données sont réduites au strict minimum technique,
+    et vous pouvez <strong>vous opposer</strong> à ce traitement à tout moment en écrivant à
+    <a href="mailto:privacy@tenflux.fr">privacy@tenflux.fr</a>.
+    <strong>Destinataire</strong> : notre serveur, hébergé par Google Cloud en Belgique
+    (point 8) ; les rapports vivent dans nos journaux techniques et nulle part ailleurs —
+    aucune régie, aucun outil tiers d'analyse. <strong>Durée</strong> : <strong>30 jours</strong>,
+    puis suppression automatique par la rotation des journaux. Nous pouvons couper cette
+    transmission de notre côté, à tout moment et pour tous les joueurs à la fois.
+  </p>
+
+  <h2>7. Ce qui reste sur votre téléphone</h2>
   <p>
     Votre record, vos parties récentes, vos réglages et la télémétrie de jeu restent sur votre
     téléphone, dans un dossier privé de l'application. <strong>Votre progression dans les
@@ -193,7 +237,7 @@
     consentement que vous avez donné à la publicité, qui vous sera redemandé.
   </p>
 
-  <h2>7. Sécurité et transferts</h2>
+  <h2>8. Sécurité et transferts</h2>
   <p>
     Tout échange entre TENFLUX et son serveur passe par <strong>HTTPS</strong>, sans exception :
     l'application refuse toute autre adresse. Le SDK publicitaire de Google chiffre également ses
@@ -212,15 +256,17 @@
     engagements que Google publie dans ses propres conditions de traitement des données.
   </p>
 
-  <h2>8. Conservation</h2>
+  <h2>9. Conservation</h2>
   <ul>
     <li><strong>Identifiant de joueur, pseudonyme, parties soumises, duels, progression des
       niveaux</strong> : conservés tant que le classement existe, ou jusqu'à la suppression de
-      votre compte (point 9) — les parties vérifiées sont alors conservées sans votre
+      votre compte (point 10) — les parties vérifiées sont alors conservées sans votre
       identifiant.</li>
     <li><strong>Journaux du serveur</strong> : ils contiennent une <strong>empreinte</strong> de
-      votre identifiant, jamais l'identifiant lui-même, et sont conservés selon la durée par défaut
-      de Google Cloud.</li>
+      votre identifiant, jamais l'identifiant lui-même, et sont conservés <strong>30 jours</strong>
+      (durée configurée de nos journaux Google Cloud).</li>
+    <li><strong>Rapports techniques d'erreur</strong> (point 6) : <strong>30 jours</strong>,
+      dans les mêmes journaux, puis suppression automatique.</li>
     <li><strong>Journaux d'infrastructure</strong> : notre hébergeur (Google Cloud) enregistre
       les requêtes reçues par le serveur, ce qui comprend <strong>votre adresse IP</strong>. Ces
       journaux servent à l'exploitation et à la sécurité du service, nous ne les relions pas à
@@ -230,10 +276,10 @@
   <p>
     Nous ne fixons pas aujourd'hui de durée au-delà de laquelle un profil inactif serait supprimé
     d'office : un classement n'a de sens que s'il garde les scores. Vous pouvez en revanche
-    supprimer votre compte vous-même, à tout moment et en quelques secondes (point 9).
+    supprimer votre compte vous-même, à tout moment et en quelques secondes (point 10).
   </p>
 
-  <h2>9. Vos droits</h2>
+  <h2>10. Vos droits</h2>
   <p>
     Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et
     d'opposition sur les données qui vous concernent.
@@ -261,7 +307,7 @@
     données de votre pays. En France, il s'agit de la CNIL.
   </p>
 
-  <h2>10. Enfants</h2>
+  <h2>11. Enfants</h2>
   <p>
     TENFLUX <strong>n'est pas destiné aux enfants</strong>. Le jeu s'adresse à un public de 13 ans
     et plus. Nous ne collectons pas sciemment de données concernant un enfant. Si vous pensez que
@@ -269,7 +315,7 @@
     nous supprimerons l'enregistrement.
   </p>
 
-  <h2>11. Sur quoi nous nous appuyons</h2>
+  <h2>12. Sur quoi nous nous appuyons</h2>
   <p>
     Pour être complets sur le vocabulaire du RGPD, voici la base légale de chaque traitement :
   </p>
@@ -285,9 +331,12 @@
       formulaire Google décrit au point 4, que vous pouvez modifier à tout moment.</li>
     <li><strong>Journaux d'infrastructure</strong> : notre <strong>intérêt légitime</strong> à
       exploiter et sécuriser le service.</li>
+    <li><strong>Rapports techniques d'erreur</strong> (point 6) : notre <strong>intérêt
+      légitime</strong> à détecter et corriger les défaillances de l'application — avec un
+      droit d'opposition exerçable par e-mail à tout moment.</li>
   </ul>
 
-  <h2>12. Modifications</h2>
+  <h2>13. Modifications</h2>
   <p>
     Toute modification de cette politique sera publiée à cette adresse, avec une nouvelle date en
     tête de page. Les changements significatifs seront signalés dans les notes de version de la
