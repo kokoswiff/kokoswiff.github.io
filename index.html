@@ -3,67 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TENFLUX</title>
-<meta name="description" content="TENFLUX — un jeu d'arcade à un doigt. Un tap change ta direction. Chaque tap se paie.">
+<title>TENFLUX — le jeu de précision où chaque tap compte</title>
+<meta name="description" content="TENFLUX, jeu d'arcade Android à un doigt : la bille avance seule, un tap la fait tourner, et chaque tap compte. 18 niveaux au minimum prouvé, partie du jour, duels. Gratuit, sans achats intégrés.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#060810">
+<link rel="canonical" href="https://tenflux.fr/">
+<link rel="alternate" hreflang="fr" href="https://tenflux.fr/">
+<link rel="alternate" hreflang="en" href="https://tenflux.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://tenflux.fr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TENFLUX">
+<meta property="og:title" content="TENFLUX — 10 taps. Une course.">
+<meta property="og:description" content="La bille avance seule. Un tap la fait tourner. Tu n'en as que dix — et le meilleur coup, souvent, c'est de ne pas appuyer. Gratuit sur Android.">
+<meta property="og:url" content="https://tenflux.fr/">
+<meta property="og:image" content="https://tenflux.fr/assets/v2/og_image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TENFLUX — 10 taps. Une course.">
+<meta name="twitter:description" content="Le jeu de précision où chaque tap se compte. Gratuit sur Android.">
+<meta name="twitter:image" content="https://tenflux.fr/assets/v2/og_image.jpg">
 <link rel="icon" href="/assets/tenflux-symbol.png" type="image/png">
 <link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "TENFLUX",
+  "url": "https://tenflux.fr/",
+  "image": "https://tenflux.fr/assets/v2/og_image.jpg",
+  "description": "Jeu d'arcade de précision à un doigt : la bille avance seule, un tap la fait tourner, et chaque tap compte.",
+  "inLanguage": ["fr", "en"],
+  "applicationCategory": "Game",
+  "gamePlatform": "Android",
+  "operatingSystem": "Android",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "installUrl": "https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux"
+}
+</script>
 </head>
 <body>
 <main class="wrap">
 
-  <div class="mark">
-    <img src="/assets/tenflux-symbol.png" alt="" width="92" height="92">
-    <h1 class="wordmark">TENFLUX</h1>
-    <p class="tagline">10 taps. Une course.</p>
-  </div>
+  <!-- ============ 1 · HERO ============ -->
+  <header class="hero">
+    <div class="mark">
+      <img src="/assets/tenflux-symbol.png" alt="Symbole TENFLUX : une bille et sa traînée" width="92" height="92">
+      <h1 class="wordmark">TENFLUX</h1>
+      <p class="tagline">10 taps. Une course.</p>
+    </div>
 
-  <p class="lede">
-    Une forme descend en zigzag. Votre seul geste est de taper l'écran pour la faire
-    changer de direction — et chaque tap se paie.
-  </p>
+    <p class="lede hero-lede">
+      La bille avance toute seule. Un tap la fait tourner.
+      Tu n'en as que dix — et le meilleur coup, souvent, c'est de <strong>ne pas appuyer</strong>.
+    </p>
 
-  <p>
-    Les obstacles gris ne tuent pas : ils renvoient, gratuitement. Passer par eux ne coûte
-    rien ; passer à côté, si. La question n'est donc jamais « comment survivre », mais
-    <strong>quel tap vaut la peine</strong>.
-  </p>
+    <p class="cta-row">
+      <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v2%26utm_content%3Dhero_fr"
+         rel="noopener">Télécharger sur Google&nbsp;Play</a>
+    </p>
+    <p class="cta-sub">Gratuit · Android · Sans achats intégrés · Jouable hors ligne</p>
 
-  <div class="card">
-    <h2>Cinq façons de jouer</h2>
-    <ul>
-      <li><strong>Partie rapide</strong> — un monde nouveau à chaque partie. Allez le plus loin possible.</li>
-      <li><strong>Partie du jour</strong> — le même monde pour tout le monde, vingt-quatre heures, trois tentatives officielles.</li>
-      <li><strong>Niveaux</strong> — dix-huit parcours écrits à la main. Dix taps, sans recharge.</li>
-      <li><strong>La Traversée</strong> — une campagne : onze secteurs, des missions, des portes à franchir.</li>
-      <li><strong>Duels</strong> — défiez un joueur en 1 contre 1 asynchrone : même monde, meilleur total.</li>
+    <div class="hero-media" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline
+             width="360" height="640"
+             poster="/assets/v2/hero_poster.jpg"
+             src="/assets/v2/hero_loop.mp4"></video>
+      <img class="hero-still" src="/assets/v2/hero_poster.jpg" alt="" width="360" height="640" loading="lazy">
+    </div>
+  </header>
+
+  <!-- ============ 2 · COMPRENDRE LE JEU ============ -->
+  <section aria-labelledby="h-rules">
+    <h2 id="h-rules">Le jeu tient en trois règles</h2>
+    <div class="grid3">
+      <div class="card rule">
+        <img src="/assets/v2/rule_tap.jpg" alt="Capture du jeu : la bille dorée change de direction après un tap, sa traînée dessine un zigzag" width="300" height="400" loading="lazy">
+        <h3>Un tap&nbsp;=&nbsp;un virage</h3>
+        <p>La bille zigzague seule. Taper inverse sa direction. C'est le seul geste du jeu.</p>
+      </div>
+      <div class="card rule">
+        <img src="/assets/v2/rule_colors.jpg" alt="Capture du jeu : un obstacle rose mortel au-dessus d'un plot gris inoffensif" width="300" height="400" loading="lazy">
+        <h3>Le rose tue, le gris rebondit</h3>
+        <p>Toucher du rose met fin à la course. Les obstacles gris te renvoient — gratuitement.</p>
+      </div>
+      <div class="card rule">
+        <img src="/assets/v2/rule_economy.jpg" alt="Capture du jeu : le compteur affiche +1 TAP gagné après trois passages sans taper" width="300" height="400" loading="lazy">
+        <h3>Chaque tap compte</h3>
+        <p>Tu pars avec 10 taps. Enchaîner des passages <em>sans taper</em> en redonne. Un tap casse la série.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · LE DÉFI TEN ============ -->
+  <section aria-labelledby="h-ten">
+    <h2 id="h-ten">Le défi TEN : le minimum est prouvé</h2>
+    <div class="card feature">
+      <p>
+        <strong>18 niveaux. 10 taps. Pas un de plus.</strong> Chaque niveau a un
+        nombre minimum de taps — et ce minimum n'est pas une estimation :
+        il est <strong>prouvé par un solveur</strong>, niveau par niveau.
+      </p>
+      <p>
+        Finir est une chose. Finir <em>au par</em> en est une autre.
+        À toi de l'égaler.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 4 · LES AUTRES MODES ============ -->
+  <section aria-labelledby="h-modes">
+    <h2 id="h-modes">Cinq façons de jouer</h2>
+    <ul class="modes">
+      <li><strong>CLASSIC</strong> — un monde nouveau à chaque course, sans fin. Ici les
+        taps se regagnent en jouant juste : c'est le mode du classement mondial.</li>
+      <li><strong>Partie du jour</strong> — le même monde pour tout le monde pendant
+        vingt-quatre heures. Trois tentatives officielles, la meilleure compte.</li>
+      <li><strong>Duels</strong> — défie un joueur en 1 contre 1 asynchrone : même monde
+        pour les deux, 48 heures pour jouer. Règles personnalisables.</li>
+      <li><strong>La Traversée</strong> — une campagne : 11 secteurs, 91 missions, des
+        modificateurs et des portes à franchir.</li>
+      <li><strong>Collection</strong> — 48 badges à gagner, 32 emblèmes et des styles
+        à débloquer. Uniquement en jouant : rien ne s'achète.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="card">
-    <h2>Ce que TENFLUX ne fait pas</h2>
-    <ul>
-      <li>Aucun achat intégré.</li>
-      <li>Aucune publicité ne donne le moindre avantage de jeu.</li>
-      <li>Aucun compte obligatoire : TENFLUX se joue sans compte. Vous pouvez associer un
-        compte Google, si vous le souhaitez, pour protéger et récupérer votre profil.</li>
-      <li>Aucune connexion requise pour jouer : le gameplay fonctionne hors ligne. Les
-        classements, la partie du jour, la synchronisation et les fonctions de compte
-        nécessitent une connexion.</li>
-    </ul>
-  </div>
+  <!-- ============ 5 · COMPÉTITION ============ -->
+  <section aria-labelledby="h-compet">
+    <h2 id="h-compet">Des scores qui veulent dire quelque chose</h2>
+    <div class="card">
+      <p>
+        Chaque partie classée est <strong>rejouée et vérifiée par le serveur</strong>,
+        coup par coup. Pas de score bidon, pas d'avantage à acheter : ce que dit le
+        classement, c'est ce que des doigts ont vraiment fait.
+      </p>
+      <ul>
+        <li>Classement mondial, avec ta fenêtre de rivaux directs.</li>
+        <li>Partie du jour : un podium qui se referme chaque soir.</li>
+        <li>Duels : mêmes murs, mêmes pièges — seules vos décisions diffèrent.</li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- Aucun badge « Disponible sur Google Play » et aucun lien Store tant que la fiche
-       n'existe pas : un badge qui ne mène nulle part est une fausse promesse, et Google
-       interdit d'en afficher un pour une application non publiée. -->
-  <p style="text-align:center; margin-top:2.5rem;">
-    <span class="status">Bientôt sur Android</span>
-  </p>
+  <!-- ============ 6 · CAPTURES ============ -->
+  <section aria-labelledby="h-shots">
+    <h2 id="h-shots">Le jeu, tel qu'il est</h2>
+    <div class="shots">
+      <figure>
+        <img src="/assets/v2/shot_run.jpg" alt="Capture réelle : une course en zone 3, la bille et sa traînée dorée entre deux obstacles roses" width="270" height="480" loading="lazy">
+        <figcaption>Une course CLASSIC</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/v2/shot_zero.jpg" alt="Capture réelle : plus aucun tap en réserve, la bille devenue grise continue seule" width="270" height="480" loading="lazy">
+        <figcaption>0 tap — et elle continue</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/v2/shot_overdrive.jpg" alt="Capture réelle : l'Overdrive accélère la bille, l'écran vire à l'ambre" width="270" height="480" loading="lazy">
+        <figcaption>Overdrive : +25 % de vitesse</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 7 · INSTALLATION ============ -->
+  <section class="install" aria-labelledby="h-install">
+    <h2 id="h-install" class="visually-hidden">Installer TENFLUX</h2>
+    <p class="install-line">Dix taps. Une course. <strong>À toi.</strong></p>
+    <p class="cta-row">
+      <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v2%26utm_content%3Dfooter_fr"
+         rel="noopener">Télécharger sur Google&nbsp;Play</a>
+    </p>
+    <p class="cta-sub">Android 7.0 ou plus récent · Gratuit, financé par de rares écrans publicitaires entre les parties — jamais pendant.</p>
+  </section>
 
   <nav class="nav" aria-label="Pages du site">
+    <a href="/en/">English</a>
     <a href="/privacy/">Confidentialité</a>
-    <a href="/privacy/en/">Privacy (EN)</a>
     <a href="/rules/">Règles de la communauté</a>
     <a href="/support/">Support</a>
     <a href="/delete-account/">Suppression des données</a>
@@ -73,7 +189,8 @@
     <p>
       TENFLUX · <a href="mailto:support@tenflux.fr">support@tenflux.fr</a><br>
       <a href="/privacy/">Politique de confidentialité</a> ·
-      <a href="/privacy/en/">Privacy policy</a>
+      <a href="/privacy/en/">Privacy policy</a> ·
+      <a href="/en/">English version</a>
     </p>
   </footer>
 

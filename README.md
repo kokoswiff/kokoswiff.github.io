@@ -25,12 +25,31 @@ property: `https://tenflux.fr/app-ads.txt` is the root of the host.
 
 | Path | What |
 |---|---|
-| `/` | Landing page |
+| `/` | Landing page (FR) |
+| `/en/` | Landing page (EN) |
 | `/privacy/` | Politique de confidentialité (FR) |
 | `/privacy/en/` | Privacy policy (EN) |
+| `/rules/` | Règles de la communauté (FR) |
 | `/support/` | Support and contact |
 | `/delete-account/` | Data deletion procedure |
 | `/app-ads.txt` | The one AdMob authorisation line, at the root |
+| `/sitemap.xml` | Sitemap (also declared in `robots.txt`) |
+
+## Store links and campaign naming
+
+The game is published: the landing pages carry real Google Play buttons. Every
+store link on this site appends a Play `referrer` with UTM fields so the Play
+Console can attribute installs by origin. Convention:
+
+```
+utm_source   = tenflux.fr | tiktok | instagram | youtube | reddit | itchio | facebook
+utm_medium   = web | social | video | ad
+utm_campaign = site_v2 | launch_v2 | <future campaign id>
+utm_content  = hero_fr | footer_fr | hero_en | footer_en | <creative id>
+```
+
+The site itself still embeds **no tracker and makes no third-party request**;
+attribution happens on Google's side of the click, nowhere else.
 
 ## What is deliberately absent
 
@@ -43,9 +62,9 @@ property: `https://tenflux.fr/app-ads.txt` is the root of the host.
   says TENFLUX does not track anyone; a page pulling a font from someone else's CDN would
   hand the visitor's IP to a third party while saying otherwise. The one webfont is served
   from this origin, and its SIL Open Font License sits beside it in `assets/OFL.txt`.
-* **A "Get it on Google Play" badge** — the app is not published publicly yet. A badge
-  pointing nowhere is a false promise, and Google's own brand rules forbid it for an
-  unpublished app.
+* ~~A "Get it on Google Play" badge~~ — this reason expired in October 2026: the app
+  **is** published, and the landing pages now link to the real listing. The buttons are
+  the site's own styling (not Google's badge artwork), so no brand-asset terms apply.
 
 ## Contact
 

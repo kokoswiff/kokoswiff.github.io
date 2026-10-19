@@ -3,3 +3,5 @@
 # from the root of this host.
 User-agent: *
 Allow: /
+
+Sitemap: https://tenflux.fr/sitemap.xml

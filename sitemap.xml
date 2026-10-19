@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tenflux.fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenflux.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenflux.fr/en/"/>
+  </url>
+  <url>
+    <loc>https://tenflux.fr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenflux.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenflux.fr/en/"/>
+  </url>
+  <url><loc>https://tenflux.fr/privacy/</loc></url>
+  <url><loc>https://tenflux.fr/privacy/en/</loc></url>
+  <url><loc>https://tenflux.fr/rules/</loc></url>
+  <url><loc>https://tenflux.fr/support/</loc></url>
+  <url><loc>https://tenflux.fr/delete-account/</loc></url>
+</urlset>
