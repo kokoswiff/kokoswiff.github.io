@@ -11,6 +11,16 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://tenflux.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tenflux.fr/en/"/>
   </url>
+  <url>
+    <loc>https://tenflux.fr/play/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenflux.fr/play/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenflux.fr/play/en/"/>
+  </url>
+  <url>
+    <loc>https://tenflux.fr/play/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenflux.fr/play/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenflux.fr/play/en/"/>
+  </url>
   <url><loc>https://tenflux.fr/privacy/</loc></url>
   <url><loc>https://tenflux.fr/privacy/en/</loc></url>
   <url><loc>https://tenflux.fr/rules/</loc></url>

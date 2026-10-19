@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TENFLUX — the precision game where every tap counts</title>
-<meta name="description" content="TENFLUX, a one-finger Android arcade game: the ball moves on its own, one tap turns it, and every tap counts. 18 levels with proven minimums, a daily run, 1v1 duels. Free, no in-app purchases.">
+<meta name="description" content="TENFLUX, a one-finger Android arcade game: the ball moves on its own, one tap turns it, and every tap counts. Try the demo in your browser. 18 levels with proven minimums, a daily run, 1v1 duels. Free, no in-app purchases.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#060810">
 <link rel="canonical" href="https://tenflux.fr/en/">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TENFLUX">
 <meta property="og:title" content="TENFLUX — 10 moves. One run.">
-<meta property="og:description" content="The ball moves on its own. One tap turns it. You get ten — and often the best move is not to press. Free on Android.">
+<meta property="og:description" content="The ball moves on its own. One tap turns it. You get ten — and often the best move is not to press. Play the demo in your browser, free on Android.">
 <meta property="og:url" content="https://tenflux.fr/en/">
 <meta property="og:image" content="https://tenflux.fr/assets/v2/og_image_en.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,10 +23,10 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TENFLUX — 10 moves. One run.">
-<meta name="twitter:description" content="The precision game where every tap counts. Free on Android.">
+<meta name="twitter:description" content="The precision game where every tap counts. Playable demo in the browser. Free on Android.">
 <meta name="twitter:image" content="https://tenflux.fr/assets/v2/og_image_en.jpg">
 <link rel="icon" href="/assets/tenflux-symbol.png" type="image/png">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,17 +34,18 @@
   "name": "TENFLUX",
   "url": "https://tenflux.fr/en/",
   "image": "https://tenflux.fr/assets/v2/og_image_en.jpg",
-  "description": "A one-finger precision arcade game: the ball moves on its own, one tap turns it, and every tap counts.",
+  "description": "A one-finger precision arcade game: the ball moves on its own, one tap turns it, and every tap counts. Playable demo in the browser.",
   "inLanguage": ["en", "fr"],
   "applicationCategory": "Game",
   "gamePlatform": "Android",
   "operatingSystem": "Android",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-  "installUrl": "https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux"
+  "installUrl": "https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux",
+  "subjectOf": { "@type": "WebPage", "name": "TENFLUX playable demo", "url": "https://tenflux.fr/play/en/" }
 }
 </script>
 </head>
-<body>
+<body class="landing">
 <main class="wrap">
 
   <!-- ============ 1 · HERO ============ -->
@@ -61,21 +62,36 @@
     </p>
 
     <p class="cta-row">
-      <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v2%26utm_content%3Dhero_en"
+      <a class="btn-demo" href="/play/en/">Play in your browser</a>
+      <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v3%26utm_content%3Dhero_en"
          rel="noopener">Get it on Google&nbsp;Play</a>
     </p>
     <p class="cta-sub">Free · Android · No in-app purchases · Plays offline</p>
 
-    <div class="hero-media" aria-hidden="true">
+    <div class="hero-media" style="--poster: url('/assets/v2/hero_poster_en.jpg')" aria-hidden="true">
       <video class="hero-video" autoplay muted loop playsinline
              width="360" height="640"
              poster="/assets/v2/hero_poster_en.jpg"
              src="/assets/v2/hero_loop_en.mp4"></video>
-      <img class="hero-still" src="/assets/v2/hero_poster_en.jpg" alt="" width="360" height="640" loading="lazy">
     </div>
   </header>
 
-  <!-- ============ 2 · HOW IT WORKS ============ -->
+  <!-- ============ 2 · TRY TENFLUX ============ -->
+  <section aria-labelledby="h-try">
+    <h2 id="h-try">Try it — right here, right now</h2>
+    <div class="card try-card">
+      <p>
+        No account, no install: the demo runs in your browser, by finger or by
+        mouse. Thirty seconds is enough to get it — and to want one more run.
+      </p>
+      <p class="cta-row">
+        <a class="btn-demo big" href="/play/en/">▶&nbsp;&nbsp;Play the demo</a>
+      </p>
+      <p class="cta-sub">Unranked demo · The real race is waiting on Android.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3 · HOW IT WORKS ============ -->
   <section aria-labelledby="h-rules">
     <h2 id="h-rules">The whole game in three rules</h2>
     <div class="grid3">
@@ -97,7 +113,7 @@
     </div>
   </section>
 
-  <!-- ============ 3 · THE TEN CHALLENGE ============ -->
+  <!-- ============ 4 · THE TEN CHALLENGE ============ -->
   <section aria-labelledby="h-ten">
     <h2 id="h-ten">The TEN challenge: the minimum is proven</h2>
     <div class="card feature">
@@ -113,41 +129,57 @@
     </div>
   </section>
 
-  <!-- ============ 4 · THE OTHER MODES ============ -->
+  <!-- ============ 5 · THE MODES ============ -->
   <section aria-labelledby="h-modes">
     <h2 id="h-modes">Five ways to play</h2>
-    <ul class="modes">
-      <li><strong>CLASSIC</strong> — a brand-new endless world every run. Here taps can be
-        earned back by playing clean: this is the world-leaderboard mode.</li>
-      <li><strong>Daily run</strong> — the same world for everyone for twenty-four hours.
-        Three official attempts; your best one counts.</li>
-      <li><strong>Duels</strong> — challenge another player in async 1v1: the same world
-        for both, 48 hours to play. Customisable rules.</li>
-      <li><strong>The Crossing</strong> — a campaign: 11 sectors, 91 missions, modifiers
-        and gates to break through.</li>
-      <li><strong>Collection</strong> — 48 badges, 32 emblems and styles to unlock.
-        Only by playing: nothing is for sale.</li>
-    </ul>
-  </section>
-
-  <!-- ============ 5 · COMPETITION ============ -->
-  <section aria-labelledby="h-compet">
-    <h2 id="h-compet">Scores that actually mean something</h2>
-    <div class="card">
-      <p>
-        Every ranked run is <strong>replayed and verified by the server</strong>, move by
-        move. No fake scores, no advantage to buy: what the leaderboard says is what real
-        fingers really did.
-      </p>
-      <ul>
-        <li>A world leaderboard, with your window of direct rivals.</li>
-        <li>The daily run: a podium that closes every night.</li>
-        <li>Duels: same walls, same traps — only your decisions differ.</li>
-      </ul>
+    <div class="modes-grid">
+      <div class="card mode">
+        <h3>Classic</h3>
+        <p>A brand-new endless world every run. Taps can be earned back by
+          playing clean: this is the world-leaderboard mode.</p>
+      </div>
+      <div class="card mode">
+        <h3>Daily run</h3>
+        <p>The same world for everyone for twenty-four hours. Three official
+          attempts; your best one counts.</p>
+      </div>
+      <div class="card mode">
+        <h3>Duels</h3>
+        <p>Challenge a player on an identical world. Their score stays hidden
+          until the verdict — 48 hours to play.</p>
+      </div>
+      <div class="card mode">
+        <h3>The Crossing</h3>
+        <p>A campaign of 11 sectors and 91 missions: gates to break through,
+          modifiers, secret objectives.</p>
+      </div>
+      <div class="card mode mode-wide">
+        <h3>TEN</h3>
+        <p>Ten taps, not one more. A free run for the record — and the 18
+          proven-par levels, yours to match.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 6 · SCREENSHOTS ============ -->
+  <!-- ============ 6 · WHY YOU'LL BE BACK ============ -->
+  <section aria-labelledby="h-return">
+    <h2 id="h-return">Why you'll be back</h2>
+    <ul class="reasons">
+      <li><strong>Beat your record</strong> — every ranked run is replayed and
+        <strong>verified by the server</strong>, move by move: what the
+        leaderboard says is what real fingers really did.</li>
+      <li><strong>The daily meet-up</strong> — a podium that closes every night.
+        Tomorrow, it all resets.</li>
+      <li><strong>The rematch</strong> — in a duel, same walls, same traps:
+        only your decisions differ.</li>
+      <li><strong>The Crossing</strong> — sectors to open, gates to break
+        through, at your own pace.</li>
+      <li><strong>The Collection</strong> — 48 badges, 32 emblems, styles for
+        your ball and your trail. Only by playing: nothing is for sale.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 7 · SCREENSHOTS ============ -->
   <section aria-labelledby="h-shots">
     <h2 id="h-shots">The game, as it really looks</h2>
     <div class="shots">
@@ -166,18 +198,19 @@
     </div>
   </section>
 
-  <!-- ============ 7 · INSTALL ============ -->
+  <!-- ============ 8 · INSTALL ============ -->
   <section class="install" aria-labelledby="h-install">
     <h2 id="h-install" class="visually-hidden">Install TENFLUX</h2>
     <p class="install-line">Ten taps. One run. <strong>Your move.</strong></p>
     <p class="cta-row">
-      <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v2%26utm_content%3Dfooter_en"
+      <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v3%26utm_content%3Dfooter_en"
          rel="noopener">Get it on Google&nbsp;Play</a>
     </p>
     <p class="cta-sub">Android 7.0 or newer · Free, funded by occasional ad screens between runs — never during one.</p>
   </section>
 
   <nav class="nav" aria-label="Site pages">
+    <a href="/play/en/">Playable demo</a>
     <a href="/">Français</a>
     <a href="/privacy/en/">Privacy</a>
     <a href="/rules/">Community rules (FR)</a>

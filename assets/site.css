@@ -247,7 +247,15 @@ footer a { color: var(--muted); }
   margin-right: auto;
 }
 
-.cta-row { text-align: center; margin: 1.6rem 0 0.4rem; }
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1.6rem 0 0.4rem;
+}
 
 .btn-play {
   display: inline-block;
@@ -278,8 +286,7 @@ footer a { color: var(--muted); }
 
 .hero-media { margin: 2.2rem auto 0; max-width: 300px; }
 
-.hero-media video,
-.hero-media .hero-still {
+.hero-media video {
   width: 100%;
   height: auto;
   display: block;
@@ -288,11 +295,18 @@ footer a { color: var(--muted); }
   background: var(--surface);
 }
 
-.hero-still { display: none; }
-
+/* Reduced motion: the clip gives way to its own poster frame (set per page
+   through --poster), drawn by CSS alone — one visual, never two. */
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
-  .hero-still { display: block; }
+  .hero-media::before {
+    content: '';
+    display: block;
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    border: 1px solid var(--hairline-strong);
+    background: var(--poster) center / cover no-repeat, var(--surface);
+  }
 }
 
 .grid3 {
@@ -392,4 +406,239 @@ footer a { color: var(--muted); }
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ---- V3 landing + /play (2026-10) ------------------------------------ */
+/* Scoped to body.landing so the legal pages keep their quieter reading
+   typography. Doctrine unchanged: no third-party request, no tracker; the
+   only JavaScript on the whole site is the first-party demo on /play. */
+
+body.landing { font-size: 18px; line-height: 1.6; }
+
+.landing h2 {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-size: clamp(1.5rem, 4.5vw, 1.95rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 3.2rem;
+}
+
+.landing section > .card,
+.landing .modes-grid,
+.landing .reasons,
+.landing .grid3,
+.landing .shots { margin-top: 1.1rem; }
+
+.landing .lede { font-size: 1.15rem; }
+
+.landing .rule p { font-size: 1rem; }
+
+/* secondary button: the demo, outlined cold */
+.btn-demo {
+  display: inline-block;
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--cold);
+  background: rgba(79, 195, 247, 0.08);
+  border: 1px solid rgba(79, 195, 247, 0.55);
+  padding: 0.8rem 1.9rem;
+  border-radius: 999px;
+}
+
+.btn-demo:hover, .btn-demo:focus-visible {
+  color: var(--ground);
+  background: var(--cold);
+}
+
+.btn-demo.big { font-size: 1.35rem; padding: 0.9rem 2.2rem; }
+
+.try-card {
+  text-align: center;
+  border-color: rgba(79, 195, 247, 0.35);
+  padding: 1.6rem 1.35rem;
+}
+
+.try-card > p:first-child { max-width: 32rem; margin-left: auto; margin-right: auto; }
+.try-card .cta-row { margin-top: 1.2rem; }
+
+/* the five modes, as cards */
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.modes-grid .mode { margin: 0; }
+.modes-grid .mode-wide { grid-column: 1 / -1; }
+
+@media (max-width: 600px) {
+  .modes-grid { grid-template-columns: 1fr; }
+}
+
+.mode h3 {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin: 0 0 0.4rem;
+}
+
+.mode p { margin: 0; font-size: 1rem; color: var(--muted); }
+
+/* reasons to come back: quiet list, gradient tick */
+.reasons { list-style: none; padding: 0; }
+
+.reasons li {
+  position: relative;
+  padding: 0.35rem 0 0.35rem 1.6rem;
+  margin: 0;
+}
+
+.reasons li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 0.85rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cold), var(--hot));
+}
+
+/* screenshots: one swipeable row on small screens */
+@media (max-width: 720px) {
+  .shots {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .shots figure { flex: 0 0 62%; max-width: 240px; scroll-snap-align: center; }
+}
+
+/* ---- /play ------------------------------------------------------------ */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.8rem;
+}
+
+.topbar .back { margin-bottom: 0; }
+
+.topbar .lang {
+  font-size: 0.92rem;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+}
+
+.topbar .lang:hover, .topbar .lang:focus-visible { color: var(--gold); border-color: var(--gold); }
+
+.play-head { text-align: center; }
+
+.play-head h1 {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.play-head .lede { max-width: 32rem; margin: 0 auto 1.6rem; }
+
+/* the phone-shaped stage: 9/16, sized from the viewport height so it fits
+   without scrolling on desktop and fills the width on small phones */
+.demo-shell {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  height: min(74vh, 720px);
+  max-width: calc(100vw - 2.5rem);
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid var(--hairline-strong);
+  background: var(--surface);
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+.demo-shell:fullscreen { border-radius: 0; border: 0; max-width: none; }
+
+.demo-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: #07080B;
+}
+
+.demo-launch {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(70% 50% at 50% 30%, rgba(79, 195, 247, 0.10), transparent 70%),
+    radial-gradient(60% 40% at 50% 100%, rgba(255, 159, 67, 0.08), transparent 70%);
+}
+
+.demo-launch[hidden] { display: none; }
+
+.demo-rules {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.demo-hint { font-size: 0.88rem; color: var(--muted); margin: 0; }
+.demo-hint a { color: var(--cold); }
+
+.demo-launch .btn-play { border: 0; cursor: pointer; font-size: 1.4rem; }
+
+.demo-tools { text-align: center; margin: 0.9rem 0 0; display: flex; justify-content: center; }
+
+.btn-ghost {
+  font-family: system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.btn-ghost:hover, .btn-ghost:focus-visible { color: var(--gold); border-color: var(--gold); }
+.btn-ghost[hidden] { display: none; }
+
+.demo-note {
+  max-width: 34rem;
+  margin: 1.4rem auto 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-height: 600px) {
+  .demo-shell { height: 86vh; }
 }

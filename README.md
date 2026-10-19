@@ -27,6 +27,9 @@ property: `https://tenflux.fr/app-ads.txt` is the root of the host.
 |---|---|
 | `/` | Landing page (FR) |
 | `/en/` | Landing page (EN) |
+| `/play/` | Playable browser demo (FR) — lazy-loads `/play/demo/fr/` in a sandboxed iframe |
+| `/play/en/` | Playable browser demo (EN) — lazy-loads `/play/demo/en/` |
+| `/play/demo/{fr,en}/` | The demo itself: ONE self-contained HTML file per language, built in the private repository by `tools/studio/playable/build_web.py` from the same engine as the playable ads (never edited here by hand, `noindex`) |
 | `/privacy/` | Politique de confidentialité (FR) |
 | `/privacy/en/` | Privacy policy (EN) |
 | `/rules/` | Règles de la communauté (FR) |
@@ -44,12 +47,16 @@ Console can attribute installs by origin. Convention:
 ```
 utm_source   = tenflux.fr | tiktok | instagram | youtube | reddit | itchio | facebook
 utm_medium   = web | social | video | ad
-utm_campaign = site_v2 | launch_v2 | <future campaign id>
-utm_content  = hero_fr | footer_fr | hero_en | footer_en | <creative id>
+utm_campaign = site_v2 | site_v3 | launch_v2 | <future campaign id>
+utm_content  = hero_fr | footer_fr | hero_en | footer_en | demo_fr | play_page_fr | <creative id>
 ```
 
 The site itself still embeds **no tracker and makes no third-party request**;
-attribution happens on Google's side of the click, nowhere else.
+attribution happens on Google's side of the click, nowhere else. The only
+JavaScript on the whole site is first-party: the demo engine under
+`/play/demo/` and the few inline lines on `/play/` that lazy-load it — zero
+network requests at runtime, zero storage (the demo's "best" lives in memory
+and dies with the tab).
 
 ## What is deliberately absent
 

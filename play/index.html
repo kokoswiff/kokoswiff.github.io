@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jouer à TENFLUX dans le navigateur — démo gratuite</title>
+<meta name="description" content="Essaie TENFLUX sans rien installer : la démo officielle tourne dans ton navigateur, au doigt ou à la souris. Un tap change la direction de la bille — 10 taps, pas un de plus.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#060810">
+<link rel="canonical" href="https://tenflux.fr/play/">
+<link rel="alternate" hreflang="fr" href="https://tenflux.fr/play/">
+<link rel="alternate" hreflang="en" href="https://tenflux.fr/play/en/">
+<link rel="alternate" hreflang="x-default" href="https://tenflux.fr/play/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TENFLUX">
+<meta property="og:title" content="Joue à TENFLUX dans ton navigateur">
+<meta property="og:description" content="La démo officielle, sans compte ni installation. La bille avance toute seule — un tap la fait tourner, et chaque tap compte.">
+<meta property="og:url" content="https://tenflux.fr/play/">
+<meta property="og:image" content="https://tenflux.fr/assets/v2/og_image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Joue à TENFLUX dans ton navigateur">
+<meta name="twitter:description" content="La démo officielle, sans compte ni installation. 10 taps, pas un de plus.">
+<meta name="twitter:image" content="https://tenflux.fr/assets/v2/og_image.jpg">
+<link rel="icon" href="/assets/tenflux-symbol.png" type="image/png">
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Démo jouable TENFLUX",
+  "url": "https://tenflux.fr/play/",
+  "inLanguage": "fr",
+  "about": {
+    "@type": "VideoGame",
+    "name": "TENFLUX",
+    "url": "https://tenflux.fr/",
+    "gamePlatform": "Android",
+    "installUrl": "https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux"
+  }
+}
+</script>
+</head>
+<body class="landing play-page">
+<main class="wrap">
+
+  <nav class="topbar" aria-label="Navigation">
+    <a class="back" href="/">TENFLUX</a>
+    <a class="lang" href="/play/en/" hreflang="en">English</a>
+  </nav>
+
+  <header class="play-head">
+    <h1>Essaie TENFLUX ici</h1>
+    <p class="lede">
+      La démo tourne dans ton navigateur — rien à installer, aucun compte.
+      Un tap change la direction de la bille. <strong>10 taps, pas un de plus.</strong>
+    </p>
+  </header>
+
+  <div class="demo-shell" id="shell">
+    <div class="demo-launch" id="launch">
+      <img src="/assets/tenflux-symbol.png" alt="" width="72" height="72">
+      <p class="demo-rules">Un tap = un virage · Le rose tue · Chaque tap compte</p>
+      <button id="startBtn" class="btn-play" type="button">▶&nbsp;&nbsp;Jouer</button>
+      <p class="demo-hint">Tap, clic — ou la barre Espace au clavier.</p>
+      <noscript>
+        <p class="demo-hint">La démo a besoin de JavaScript. Sans lui, le vrai jeu t'attend :
+        <a href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v3%26utm_content%3Dplay_noscript_fr"
+           rel="noopener">TENFLUX sur Google Play</a>.</p>
+      </noscript>
+    </div>
+    <div class="demo-launch" id="demoError" hidden>
+      <p class="demo-rules">La démo n'a pas pu se charger.</p>
+      <p class="demo-hint">Réessaie en rechargeant la page — ou passe directement à la vraie course :</p>
+      <p><a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v3%26utm_content%3Dplay_error_fr"
+         rel="noopener">Télécharger sur Google&nbsp;Play</a></p>
+    </div>
+  </div>
+
+  <p class="demo-tools">
+    <button id="fsBtn" class="btn-ghost" type="button" hidden>Plein écran</button>
+  </p>
+
+  <p class="demo-note">
+    Démo hors ligne, dans la page : les vraies règles du mode CLASSIC, une
+    progression resserrée pour des parties courtes. Aucun score n'est envoyé,
+    aucun cookie n'est posé — le record affiché ne vit que le temps de ta visite.
+  </p>
+
+  <section aria-labelledby="h-full">
+    <h2 id="h-full">Et la vraie course ?</h2>
+    <div class="card try-card">
+      <p>
+        L'application complète ajoute ce que la démo ne peut pas offrir :
+        le <strong>classement mondial vérifié par le serveur</strong>, la Partie
+        du jour, les Duels, la Traversée et les 18 niveaux TEN au minimum prouvé.
+      </p>
+      <p class="cta-row">
+        <a class="btn-play" href="https://play.google.com/store/apps/details?id=io.github.kokoswiff.tenflux&amp;referrer=utm_source%3Dtenflux.fr%26utm_medium%3Dweb%26utm_campaign%3Dsite_v3%26utm_content%3Dplay_page_fr"
+           rel="noopener">Télécharger sur Google&nbsp;Play</a>
+      </p>
+      <p class="cta-sub">Gratuit · Android 7.0 ou plus récent · Sans achats intégrés</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      TENFLUX · <a href="mailto:support@tenflux.fr">support@tenflux.fr</a><br>
+      <a href="/">Accueil</a> ·
+      <a href="/privacy/">Politique de confidentialité</a> ·
+      <a href="/play/en/">English version</a>
+    </p>
+  </footer>
+
+</main>
+<script>
+/* First-party only: no request leaves this origin, nothing is tracked.
+   The engine is NOT loaded until the visitor asks to play. */
+(function () {
+  'use strict';
+  var shell = document.getElementById('shell');
+  var launch = document.getElementById('launch');
+  var startBtn = document.getElementById('startBtn');
+  var errBox = document.getElementById('demoError');
+  var fsBtn = document.getElementById('fsBtn');
+  var frame = null;
+
+  function fail() {
+    if (frame) { frame.parentNode && frame.parentNode.removeChild(frame); frame = null; }
+    launch.hidden = true;
+    errBox.hidden = false;
+    if (fsBtn) fsBtn.hidden = true;
+  }
+
+  startBtn.addEventListener('click', function () {
+    if (frame) return;
+    startBtn.disabled = true;
+    frame = document.createElement('iframe');
+    frame.className = 'demo-frame';
+    frame.title = 'Démo jouable TENFLUX';
+    /* The demo is sandboxed: it can run its own script and open the Play
+       listing from its install button, nothing else. */
+    frame.setAttribute('sandbox', 'allow-scripts allow-popups allow-popups-to-escape-sandbox');
+    var timer = setTimeout(fail, 8000);
+    frame.addEventListener('load', function () {
+      clearTimeout(timer);
+      launch.hidden = true;
+      if (fsBtn) fsBtn.hidden = false;
+      try { frame.focus(); } catch (e) {}
+    });
+    frame.addEventListener('error', function () { clearTimeout(timer); fail(); });
+    frame.src = '/play/demo/fr/';
+    shell.appendChild(frame);
+  });
+
+  var fsRequest = shell.requestFullscreen || shell.webkitRequestFullscreen;
+  if (!fsRequest) {
+    fsBtn.parentNode.removeChild(fsBtn);
+    fsBtn = null;
+  } else {
+    fsBtn.addEventListener('click', function () {
+      var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+      try {
+        if (fsEl) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+        else fsRequest.call(shell);
+      } catch (e) {}
+      if (frame) setTimeout(function () { try { frame.focus(); } catch (e) {} }, 60);
+    });
+  }
+})();
+</script>
+</body>
+</html>
